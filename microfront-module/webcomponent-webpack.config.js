@@ -3,7 +3,7 @@ const path = require("path");
 module.exports = {
     mode: 'development',
     entry: {
-      module_example: './src/AppWebPack'
+      module_example: './src/AppWebComponents'
     },
     module: {
         rules: [
