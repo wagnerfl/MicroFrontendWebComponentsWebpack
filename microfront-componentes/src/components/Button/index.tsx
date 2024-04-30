@@ -3,9 +3,9 @@ import styled from "styled-components";
 
 import r2wc from '@r2wc/react-to-web-component';
 
-const ButtonStyled= styled.button<{ $primary?: boolean; }>`
-  background: ${props => props.$primary ? "#BF4F74" : "white"};
-  color: ${props => props.$primary ? "white" : "#BF4F74"};
+const ButtonStyled= styled.button`
+  background: #BF4F74;
+  color: #FFFFFF;
   font-size: 1em;
   margin: 1em;
   padding: 0.25em 1em;
@@ -19,12 +19,12 @@ interface ButtonProps {
 }
 export default function Button({label, onClick}: ButtonProps) {
   return (
-    <ButtonStyled $primary onClick={onClick}>{label}</ButtonStyled>
+    <ButtonStyled onClick={onClick}>{label}</ButtonStyled>
   )
 }
 
 const ButtonWebComponent = r2wc(Button, {
-  props: ['label', 'onClick'],
+  props: ['label', 'onClick']
 });
 
 customElements.define('button-example', ButtonWebComponent);
