@@ -4,6 +4,7 @@ declare global {
   namespace JSX {
     interface IntrinsicElements {
       ['button-example']: ButtonWebComponent;
+      ['module-example']: ModuleWebComponent;
     }
   }
 }
@@ -12,3 +13,5 @@ interface ButtonWebComponent extends React.DetailedHTMLProps<React.HTMLAttribute
   label?: string;
   onClick?: () => void;
 }
+
+interface ModuleWebComponent extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> {}
